@@ -1,0 +1,23 @@
+<h1>Listing transporters</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @transporters.each do |transporter| %>
+  <tr>
+    <td><%= transporter.Name %></td>
+    <td><%= link_to 'Show', transporter %></td>
+    <td><%= link_to 'Edit', edit_transporter_path(transporter) %></td>
+    <td><%= link_to 'Destroy', transporter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Transporter', new_transporter_path %>

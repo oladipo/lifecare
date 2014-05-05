@@ -1,0 +1,53 @@
+<%= form_for(@preshipment_advice) do |f| %>
+  <% if @preshipment_advice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@preshipment_advice.errors.count, "error") %> prohibited this preshipment_advice from being saved:</h2>
+
+      <ul>
+      <% @preshipment_advice.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label "Customer" %><br />
+    <%= collection_select( :waybill, :customer_id, @customers, :id, :Name) %>
+  </div>
+  <div class="field">
+    <%= f.label "Waybill" %><br />
+    <%= collection_select( :waybill, :waybill_id, @waybills, :id, :Number) %>
+  </div>
+    <div class="field">
+    <%= f.label "Vehicle" %><br />
+    <%= collection_select( :waybill, :vehicle_id, @vehicles, :id, :Name) %>
+  </div>
+    <div class="field">
+    <%= f.label "Driver" %><br />
+    <%= collection_select( :waybill, :driver_id, @drivers, :id, :Name) %>
+  </div>
+    <div class="field">
+    <%= f.label "Destination" %><br />
+    <%= collection_select( :waybill, :location_id, @locations, :id, :Name) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_area :Description, rows: 6 %>
+  </div>
+  <div class="field">
+    <%= f.label :Quantity %><br />
+    <%= f.number_field :Quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :TimeOfArrival %><br />
+    <%= f.datetime_select :TimeOfArrival %>
+  </div>
+  <div class="field">
+    <%= f.label :TimeOfDispatch %><br />
+    <%= f.datetime_select :TimeOfDispatch %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

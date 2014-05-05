@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @purchase_order.Number %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @purchase_order.Description %>
+</p>
+
+<p>
+  <b>Issuedate:</b>
+  <%= @purchase_order.IssueDate %>
+</p>
+
+<p>
+  <b>Expirydate:</b>
+  <%= @purchase_order.ExpiryDate %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @purchase_order.Quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_purchase_order_path(@purchase_order) %> |
+<%= link_to 'Back', purchase_orders_path %>

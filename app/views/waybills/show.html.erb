@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @waybill.Number %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @waybill.Description %>
+</p>
+
+<p>
+  <b>Dispatchdate:</b>
+  <%= @waybill.DispatchDate %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @waybill.Quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_waybill_path(@waybill) %> |
+<%= link_to 'Back', waybills_path %>

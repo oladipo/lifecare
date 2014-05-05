@@ -1,0 +1,41 @@
+<%= form_for(@purchase_order) do |f| %>
+  <% if @purchase_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@purchase_order.errors.count, "error") %> prohibited this purchase_order from being saved:</h2>
+
+      <ul>
+      <% @purchase_order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Number %><br />
+    <%= f.text_field :Number %>
+  </div>
+    <div class="field">
+    <%= f.label :Quantity %><br />
+    <%= f.number_field :Quantity %>
+  </div>
+  <div class="field">
+    <%= f.label "Delivery Location" %><br />
+    <%= collection_select( :purchase_order, :location_id, @locations, :id, :Name) %>
+  </div>
+  <div class="field">
+    <%= f.label :IssueDate %><br />
+    <%= f.date_select :IssueDate %>
+  </div>
+  <div class="field">
+    <%= f.label :ExpiryDate %><br />
+    <%= f.date_select :ExpiryDate %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_area :Description, rows: 6 %>
+  </div>
+    <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

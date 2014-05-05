@@ -1,0 +1,29 @@
+<h1>Listing waybills</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Description</th>
+    <th>Dispatchdate</th>
+    <th>Quantity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @waybills.each do |waybill| %>
+  <tr>
+    <td><%= waybill.Number %></td>
+    <td><%= waybill.Description %></td>
+    <td><%= waybill.DispatchDate %></td>
+    <td><%= waybill.Quantity %></td>
+    <td><%= link_to 'Show', waybill %></td>
+    <td><%= link_to 'Edit', edit_waybill_path(waybill) %></td>
+    <td><%= link_to 'Destroy', waybill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Waybill', new_waybill_path %>

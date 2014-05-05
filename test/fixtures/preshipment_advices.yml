@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Description: MyString
+  Quantity: 1
+  TimeOfArrival: 2014-05-05 08:26:53
+  TimeOfDispatch: 2014-05-05 08:26:53
+
+two:
+  Description: MyString
+  Quantity: 1
+  TimeOfArrival: 2014-05-05 08:26:53
+  TimeOfDispatch: 2014-05-05 08:26:53

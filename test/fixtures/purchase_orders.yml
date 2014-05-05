@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Number: MyString
+  Description: MyString
+  IssueDate: 2014-05-05
+  ExpiryDate: 2014-05-05
+  Quantity: 1
+
+two:
+  Number: MyString
+  Description: MyString
+  IssueDate: 2014-05-05
+  ExpiryDate: 2014-05-05
+  Quantity: 1

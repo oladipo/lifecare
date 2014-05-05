@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @preshipment_advice.Description %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @preshipment_advice.Quantity %>
+</p>
+
+<p>
+  <b>Timeofarrival:</b>
+  <%= @preshipment_advice.TimeOfArrival %>
+</p>
+
+<p>
+  <b>Timeofdispatch:</b>
+  <%= @preshipment_advice.TimeOfDispatch %>
+</p>
+
+
+<%= link_to 'Edit', edit_preshipment_advice_path(@preshipment_advice) %> |
+<%= link_to 'Back', preshipment_advices_path %>

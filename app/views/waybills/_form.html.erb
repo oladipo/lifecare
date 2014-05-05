@@ -1,0 +1,54 @@
+<%= form_for(@waybill) do |f| %>
+  <% if @waybill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@waybill.errors.count, "error") %> prohibited this waybill from being saved:</h2>
+
+      <ul>
+      <% @waybill.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Number %><br />
+    <%= f.text_field :Number %>
+  </div>
+    <div class="field">
+    <%= f.label :Quantity %><br />
+    <%= f.number_field :Quantity %>
+  </div>
+  <div class="field">
+    <%= f.label 'Delivery Location' %><br />
+    <%= collection_select( :waybill, :location_id, @locations, :id, :Name) %>
+  </div>
+  <div class="field">
+    <%= f.label 'Purchase Order' %><br />
+    <%= collection_select( :waybill, :purchase_order_id, @purchaseorders, :id, :Number) %>
+  </div>
+  <div class="field">
+    <%= f.label 'Transporter' %><br />
+    <%= collection_select( :waybill, :transporter_id, @transporters, :id, :Name) %>
+  </div>
+    <div class="field">
+    <%= f.label 'Driver' %><br />
+    <%= collection_select( :waybill, :driver_id, @drivers, :id, :Name) %>
+  </div>
+  <div class="field">
+    <%= f.label 'Vehicle' %><br />
+    <%= collection_select( :waybill, :vehicle_id, @vehicles, :id, :Name) %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_area :Description, rows: 6 %>
+  </div>
+  <div class="field">
+    <%= f.label :DispatchDate %><br />
+    <%= f.date_select :DispatchDate %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

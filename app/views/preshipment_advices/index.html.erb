@@ -1,0 +1,29 @@
+<h1>Listing Preshipment Advices</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Quantity</th>
+    <th>Timeofarrival</th>
+    <th>Timeofdispatch</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @preshipment_advices.each do |preshipment_advice| %>
+  <tr>
+    <td><%= preshipment_advice.Description %></td>
+    <td><%= preshipment_advice.Quantity %></td>
+    <td><%= preshipment_advice.TimeOfArrival %></td>
+    <td><%= preshipment_advice.TimeOfDispatch %></td>
+    <td><%= link_to 'Show', preshipment_advice %></td>
+    <td><%= link_to 'Edit', edit_preshipment_advice_path(preshipment_advice) %></td>
+    <td><%= link_to 'Destroy', preshipment_advice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Preshipment advice', new_preshipment_advice_path %>
