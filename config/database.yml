@@ -4,31 +4,38 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: sqlite3
+  adapter: postgresql
   encoding: utf8
-  database: lifecare_development
-  username: root
-  password: faraday
-  host: 127.0.0.1
-  port: 3306
+  database: ddb0gt3m3chhtd
+  username: dwrthbiqgltmfv
+  password: SVwS-vrHMfjL-0R0YHUwE-YNbe
+  host: ec2-54-83-204-85.compute-1.amazonaws.com
+  port: 5432
+  Psql:	heroku pg:psql --app lifecare-production olive
+  URL:	postgres://dwrthbiqgltmfv:SVwS-vrHMfjL-0R0YHUwE-YNbe@ec2-54-83-204-85.compute-1.amazonaws.com:5432/ddb0gt3m3chhtd
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: sqlite3
+  adapter: postgresql
   encoding: utf8
-  database: lifecare_test
-  username: root
-  password: faraday
-  host: 127.0.0.1
-  port: 3306
+  database: ddb0gt3m3chhtd
+  username: dwrthbiqgltmfv
+  password: SVwS-vrHMfjL-0R0YHUwE-YNbe
+  host: ec2-54-83-204-85.compute-1.amazonaws.com
+  port: 5432
+  Psql:	heroku pg:psql --app lifecare-production olive
+  URL:	postgres://dwrthbiqgltmfv:SVwS-vrHMfjL-0R0YHUwE-YNbe@ec2-54-83-204-85.compute-1.amazonaws.com:5432/ddb0gt3m3chhtd
 
 production:
-  adapter: sqlite3
+  adapter: postgresql
   encoding: utf8
-  database: lifecare_production
-  username: root
-  password: faraday
-  host: 127.0.0.1
-  port: 3306
+  database: ddb0gt3m3chhtd
+  username: dwrthbiqgltmfv
+  password: SVwS-vrHMfjL-0R0YHUwE-YNbe
+  host: ec2-54-83-204-85.compute-1.amazonaws.com
+  port: 5432
+  Psql:	heroku pg:psql --app lifecare-production olive
+  URL:	postgres://dwrthbiqgltmfv:SVwS-vrHMfjL-0R0YHUwE-YNbe@ec2-54-83-204-85.compute-1.amazonaws.com:5432/ddb0gt3m3chhtd
+  
