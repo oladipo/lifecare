@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/oladipo/lifecare.svg?branch=master)](https://travis-ci.org/oladipo/lifecare)
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
